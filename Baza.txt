@@ -1,0 +1,76 @@
+CREATE (john:Employee {name:'John', surname: 'Smith'})
+CREATE (alice:Employee {name:'Alice', surname: 'Johnson'})
+CREATE (michael:Employee {name:'Michael', surname: 'Williams'})
+CREATE (sarah:Employee {name:'Sarah', surname: 'Brown'})
+CREATE (emma:Employee {name:'Emma', surname: 'Davis'})
+CREATE (william:Employee {name:'William', surname: 'Miller'})
+CREATE (olivia:Employee {name:'Olivia', surname: 'Wilson'})
+CREATE (james:Employee {name:'James', surname: 'Moore'})
+CREATE (emily:Employee {name:'Emily', surname: 'Taylor'})
+CREATE (daniel:Employee {name:'Daniel', surname: 'Anderson'})
+CREATE (ava:Employee {name:'Ava', surname: 'Thomas'})
+CREATE (alexander:Employee {name:'Alexander', surname: 'Jackson'})
+CREATE (charlotte:Employee {name:'Charlotte', surname: 'White'})
+CREATE (benjamin:Employee {name:'Benjamin', surname: 'Harris'})
+CREATE (mia:Employee {name:'Mia', surname: 'Martin'})
+CREATE (henry:Employee {name:'Henry', surname: 'Clark'})
+CREATE (amelia:Employee {name:'Amelia', surname: 'Lee'})
+CREATE (ethan:Employee {name:'Ethan', surname: 'Walker'})
+CREATE (chloe:Employee {name:'Chloe', surname: 'Allen'})
+CREATE (david:Employee {name:'David', surname: 'Young'})
+
+
+CREATE (sales:Department {name:'Sales'})
+CREATE (marketing:Department {name:'Marketing'})
+CREATE (finance:Department {name:'Finance'})
+CREATE (hr:Department {name:'Human Resources'})
+CREATE (it:Department {name:'IT'})
+CREATE (management:Department {name:'Management'})
+
+CREATE
+    (john)-[:WORKS_IN]->(sales),
+    (alice)-[:WORKS_IN]->(sales),
+    (michael)-[:WORKS_IN]->(sales),
+    (sarah)-[:WORKS_IN]->(sales),
+    (emma)-[:WORKS_IN]->(marketing),
+    (william)-[:WORKS_IN]->(marketing),
+    (olivia)-[:WORKS_IN]->(marketing),
+    (james)-[:WORKS_IN]->(marketing),
+    (emily)-[:WORKS_IN]->(finance),
+    (daniel)-[:WORKS_IN]->(finance),
+    (ava)-[:WORKS_IN]->(finance),
+    (alexander)-[:WORKS_IN]->(finance),
+    (charlotte)-[:WORKS_IN]->(hr),
+    (benjamin)-[:WORKS_IN]->(hr),
+    (mia)-[:WORKS_IN]->(hr),
+    (henry)-[:WORKS_IN]->(hr),
+    (amelia)-[:WORKS_IN]->(it),
+    (ethan)-[:WORKS_IN]->(it),
+    (chloe)-[:WORKS_IN]->(it),
+    (david)-[:WORKS_IN]->(it)
+
+CREATE
+    (john)-[:MANAGES]->(alice),
+    (john)-[:MANAGES]->(michael),
+    (john)-[:MANAGES]->(sarah),
+    (emma)-[:MANAGES]->(william),
+    (emma)-[:MANAGES]->(olivia),
+    (emma)-[:MANAGES]->(james),
+    (emily)-[:MANAGES]->(daniel),
+    (emily)-[:MANAGES]->(ava),
+    (emily)-[:MANAGES]->(alexander),
+    (charlotte)-[:MANAGES]->(benjamin),
+    (charlotte)-[:MANAGES]->(mia),
+    (charlotte)-[:MANAGES]->(henry),
+    (amelia)-[:MANAGES]->(ethan),
+    (amelia)-[:MANAGES]->(chloe),
+    (amelia)-[:MANAGES]->(david)
+
+CREATE(tom:Employee {name:'Tom', surname:'Tracy'})
+CREATE
+    (tom)-[:WORKS_IN]->(management),
+    (tom)-[:MANAGES]->(john),
+    (tom)-[:MANAGES]->(emma),
+    (tom)-[:MANAGES]->(emily),
+    (tom)-[:MANAGES]->(charlotte),
+    (tom)-[:MANAGES]->(amelia)
